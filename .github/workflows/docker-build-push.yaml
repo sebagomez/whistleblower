@@ -6,7 +6,7 @@ on:
       - master
     paths:
     - src/**
-    - .github/workflows/docker-build-push.yml
+    - .github/workflows/docker-build-push.yaml
 
 jobs:
 

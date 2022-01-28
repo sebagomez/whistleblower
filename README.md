@@ -1,5 +1,5 @@
 [![.NET build](https://github.com/sebagomez/whistleblower/actions/workflows/dotnet-build.yaml/badge.svg)](https://github.com/sebagomez/whistleblower/actions/workflows/dotnet-build.yaml)
-
+[![Docker build&push](https://github.com/sebagomez/whistleblower/actions/workflows/docker-build-push.yaml/badge.svg)](https://github.com/sebagomez/whistleblower/actions/workflows/docker-build-push.yaml)
 
 # whistleblower
 
