@@ -1,3 +1,6 @@
+[![.NET build](https://github.com/sebagomez/whistleblower/actions/workflows/dotnet-build.yaml/badge.svg)](https://github.com/sebagomez/whistleblower/actions/workflows/dotnet-build.yaml)
+
+
 # whistleblower
 
 List all of your local environment variables.

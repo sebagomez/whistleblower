@@ -4,11 +4,11 @@ on:
   push:
     paths:
     - src/**
-    - .github/workflows/dotnet-build.yml
+    - .github/workflows/dotnet-build.yaml
   pull_request:
     paths:
     - src/**
-    - .github/workflows/dotnet-build.yml
+    - .github/workflows/dotnet-build.yaml
 
 env:
   config: Release
