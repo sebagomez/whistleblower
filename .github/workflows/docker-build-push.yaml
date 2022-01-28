@@ -1,0 +1,26 @@
+name: Docker build
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+    - src/**
+    - .github/workflows/docker-build-push.yml
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v1.1.1
+      with:
+        username: sebagomez
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        tags: latest
+        add_git_labels: false
+        path: ./src
+        push: true 
