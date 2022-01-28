@@ -1,10 +1,33 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Whistleblower";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h3>Environment Variables</h3>
 </div>
+
+
+<table>
+	<thead>
+		<tr>
+			<th><div>Name</div>
+			<th><div>Value</div>
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach (EnvVar variable in Model.Variables)
+{
+        <tr>
+            <td>
+                <div>@variable.Name</div>
+            </td>
+            <td>
+                <div>@variable.Value</div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

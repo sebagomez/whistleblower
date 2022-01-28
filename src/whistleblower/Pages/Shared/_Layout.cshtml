@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="~/whistleblower.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <a href="https://github.com/sebagomez/whistleblower/">
+        <img style="position: absolute; top: 0; right: 0; border: 0;z-index: 1;" loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+    </a>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -18,14 +21,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    @* <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                    </ul>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/EnvVars">Environment Variables</a>
+                        </li>
+                    </ul> *@
                 </div>
             </div>
         </nav>
@@ -38,7 +44,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - whistleblower - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022 - sebagomez/whistleblower
         </div>
     </footer>
 
