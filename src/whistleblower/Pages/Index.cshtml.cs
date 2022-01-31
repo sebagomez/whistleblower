@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace whistleblower.Pages;
 
@@ -15,11 +14,6 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-        foreach(string key in Environment.GetEnvironmentVariables().Keys)
-        {
-            var varVal = Environment.GetEnvironmentVariable(key);
-            if (varVal != null)
-                Variables.Add(new EnvVar(key, varVal));
-        }
+
     }
 }

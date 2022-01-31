@@ -1,4 +1,5 @@
 ﻿@page
+@using System.Collections
 @model IndexModel
 @{
     ViewData["Title"] = "Whistleblower";
@@ -18,14 +19,14 @@
     </thead>
     <tbody>
 
-@foreach (EnvVar variable in Model.Variables)
-{
+
+@foreach(DictionaryEntry kv in Environment.GetEnvironmentVariables()){
         <tr>
             <td>
-                <div>@variable.Name</div>
+                <div>@kv.Key</div>
             </td>
             <td>
-                <div>@variable.Value</div>
+                <div>@kv.Value</div>
             </td>
         </tr>
 }
