@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whistleblower-deployment
+  labels:
+    app: whistleblower
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whistleblower
+  template:
+    metadata:
+      labels:
+        app: whistleblower
+    spec:
+      containers:
+      - name: whistleblower
+        image: sebagomez/whistleblower:latest
+        ports:
+        - containerPort: 80
