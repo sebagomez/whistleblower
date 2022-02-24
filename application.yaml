@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: whistleblower
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/sebagomez/whistleblower.git
+    targetRevision: HEAD
+    path: kubernetes
+  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: apps
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true # recreate if something is manually altered in the cluster
+      prune: true    # delete from the cluster is manifests are deleted from the repo
